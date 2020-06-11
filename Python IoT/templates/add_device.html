@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Add Devices</title>
+{% endblock %}
+
+{% block  body %}
+<h1></h1>
+{% for message in form.deviceID.errors %}
+	<div>{{ message }}</div>
+{% endfor %}
+<div class="content">
+    <h2>Add another device </h2>
+    <form action="/addDevice" method="POST" >
+        <fieldset class="formsection1">
+			<legend>Device details</legend>
+				<p>
+					{{form.deviceID.label}}
+                	{{form.deviceID}}
+				</p>
+                
+                <p> 
+                
+					{{form.submit}}
+                </p>
+                   
+		</fieldset>
+    </form>
+    </div>
+    
+{% endblock %}

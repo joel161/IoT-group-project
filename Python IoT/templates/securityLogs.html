@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> IoT website for assignment</title>
+
+{% endblock %}
+{% block  body %}     
+    <h1>Security alarm Information</h1>
+
+    <div> 
+        <table>
+    <tr>
+        <th>Date/Time</th>
+        <th>Status</th>
+        <th>Device ID</th>
+    </tr>
+    {% for x in logs %}
+    <tr>
+        <td> {{ x[0] }}</td>
+        <td> {{ x[1] }}</td>
+        <td> {{ x[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block  body %}
+    <h1>Home</h1>
+    <h3>Welcome : {{name}}</h3>
+    <ul>
+        <li><a href="/account">Account</a></li>
+        <li><a href="/addDevice">Add Device</a></li>
+        <li><a href="/changepin">Change Pin</a></li>
+        <li><a href="/keypadLogds">View Keypad Logs</a></li>
+        <li><a href="/securityLogs">View Security alarm Logs</a></li>
+        <li><a href="/logout">log Out</a></li>
+    </ul>
+{% endblock %}
+</html>

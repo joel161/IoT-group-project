@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Create User for Smart Home Security system</title>
+{% endblock %}
+
+{% block  body %}
+<h1></h1>
+<div class="content">
+    <h2>Pin details </h2>
+    <form action="/changepin" method="POST">
+        <fieldset class="formsection1">
+			<legend>Change your pin</legend>
+				<p>
+					<label for="cpin">Current PI : {{currentPin}}</label>
+				</p>
+				<p>
+					{{form.pin.label}}
+                	{{form.pin}}
+				</p>
+                <p> 
+                
+					{{form.submit}}
+                </p>
+                   
+		</fieldset>
+    </form>
+    </div>
+    
+{% endblock %}

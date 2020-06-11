@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> IoT website for assignment</title>
+{% endblock %}
+
+{% block  body %}
+<h1></h1>
+<div class="content">
+    <h2>Login for users </h2>
+    {% for message in form.email.errors %}
+         <div>{{ message }}</div>
+    {% endfor %}
+
+
+    {% for message in form.password.errors %}
+         <div>{{ message }}</div>
+    {% endfor %}
+        <form action="/login" method="POST" >
+            <div class="container">
+                {{form.email.label}}
+                {{form.email}}
+                <br>
+                {{form.password.label}}
+                {{form.password}}
+            </br>
+                {{form.submit}}
+        </br>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+            </div>
+            
+        </form>
+</div>    
+{% endblock %}
